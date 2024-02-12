@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', cursive;
+}
+
+body {
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9dfe9;
+    padding: 20px; /* Menambahkan padding agar konten tidak terlalu dekat dengan tepi layar */
+}
+
+.greetings {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center; /* Tambahkan agar teks menjadi rata tengah pada tampilan mobile */
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 12px #f9f5f6, 0 0 50px #f9f5f6, 0 0 100px #f9f5f6;
+    }
+    10%, 90% {
+        color: #696565;
+        text-shadow: none;
+    }
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center; /* Tambahkan agar teks menjadi rata tengah pada tampilan mobile */
+    color: #de7b9f;
+}
+
+.button button {
+    background-color: #f9f5f6;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: 20px; /* Menambahkan jarak antara gambar dan elemen lainnya */
+}
+
+@media screen and (max-width: 574px) {
+    .greetings {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .description {
+        font-size: 1rem;
+        text-align: center; /* Tambahkan agar teks menjadi rata tengah pada tampilan mobile */
+        margin-bottom: 10px; /* Mengurangi margin-bottom agar sesuai dengan tampilan mobile */
+    }
+
+    .button button {
+        font-size: 0.8rem;
+        padding: 8px 16px; /* Mengurangi padding agar sesuai dengan tampilan mobile */
+    }
+
+    .img {
+        max-width: 80%;
+        height: auto;
+        margin-top: 10px; /* Menambahkan jarak antara gambar dan elemen lainnya pada tampilan mobile */
+    }
+}
